@@ -1,0 +1,65 @@
+nav, .Contenedor,footer, article, header,.Principal,aside
+{
+    max-width: 93%;
+    margin: auto;
+    text-align: center;
+    border-radius: 0.3em;
+}
+nav{
+    background-color:rgb(19, 189, 138);
+}
+.Contenedor{
+    background-color: cornflowerblue;
+}
+footer{
+    background-color: cyan;
+}
+article{
+    background-color: deeppink;
+}
+header{
+    background-color: lightpink;
+}
+.Principal{
+    background-color: mediumorchid;
+    display: inline-block;
+    width: 65%;
+    vertical-align: top;
+}
+aside{
+    background-color: orange;
+    display: inline-block;
+    width: 28%;
+}
+/*Menú*/
+.Menú li{
+    display: inline-block;
+}
+li a, btnDesplagable{
+    display: inline-block;
+    color: rgb(184, 28, 184);
+    padding: 0.9em 1em;
+    text-align: center;
+    text-decoration: none;
+}
+.ContenidoDesplegable{
+    display: none;
+    position: absolute;
+    background-color:salmon ;
+    min-width: 8em;
+}
+.ContenidoDesplegable a{
+    color: rgb(18, 71, 51);
+    padding: 0.9em 1em;
+    display: block;
+    text-align: left;
+}
+.ContenidoDesplegable a:hover{
+    background-color: rgb(86, 150, 167) ;
+}
+.Desplegable:hover .ContenidoDesplegable{
+    display: block;
+}
+li a:hover{
+    background-color: skyblue;
+}
