@@ -174,13 +174,13 @@ div.footContactLogoCalidad a img, div.footContactLogoCalidad img.certificado1 {
    
                 
 }
-@navbar{
+
     .navbar-nav li{
         display: inline-block;
     }
     li a, btnDesplagable{
         display: inline-block;
-        color: rgb(184, 28, 184);
+        
         padding: 0.9em 1em;
         text-align: center;
         text-decoration: none;
@@ -188,7 +188,7 @@ div.footContactLogoCalidad a img, div.footContactLogoCalidad img.certificado1 {
     .ContenidoDesplegable{
         display: none;
         position: absolute;
-        background-color:salmon ;
+        background-color:rgb(255, 255, 255) ;
         min-width: 8em;
     }
     .ContenidoDesplegable a{
@@ -206,5 +206,5 @@ div.footContactLogoCalidad a img, div.footContactLogoCalidad img.certificado1 {
     li a:hover{
         background-color: skyblue;
     }
-}
+
 
