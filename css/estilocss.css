@@ -169,6 +169,42 @@ div.footContactLogoCalidad a img, div.footContactLogoCalidad img.certificado1 {
         line-height: 14px;
     }
     div.footContactLogoCalidad {
-    padding-top: 15px;
-    }
+        padding-top: 15px;
+    } 
+   
+                
 }
+
+    .navbar-nav li{
+        display: inline-block;
+    }
+    li a, btnDesplagable{
+        display: inline-block;
+        
+        padding: 0.9em 1em;
+        text-align: center;
+        text-decoration: none;
+    }
+    .ContenidoDesplegable{
+        display: none;
+        position: absolute;
+        background-color:rgb(255, 255, 255) ;
+        min-width: 8em;
+    }
+    .ContenidoDesplegable a{
+        color: rgb(18, 71, 51);
+        padding: 0.9em 1em;
+        display: block;
+        text-align: left;
+    }
+    .ContenidoDesplegable a:hover{
+        background-color: rgb(86, 150, 167) ;
+    }
+    .Desplegable:hover .ContenidoDesplegable{
+        display: block;
+    }
+    li a:hover{
+        background-color: skyblue;
+    }
+
+
