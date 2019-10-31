@@ -19,15 +19,8 @@
   <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
   <link href="css/ie10-viewport-bug-workaround.css" rel="stylesheet">
 
-  <!-- Just for debugging purposes. Don't actually copy these 2 lines! -->
-  <!--[if lt IE 9]><script src="../../assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
   <script src="js/ie-emulation-modes-warning.js"></script>
 
-  <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
-  <!--[if lt IE 9]>
-      <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
-      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
-    <![endif]-->
 
   <!-- Estilos css -->
   <link href="css/carrusel.css" rel="stylesheet">
@@ -35,6 +28,9 @@
   <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
   <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+  <link href="actividades/sopa_de_letras/sopa_de_letras.htm" rel="stylesheet">
+  <link href="actividades/DSW/DSW.htm" rel="stylesheet">
+  <link href="actividades/Tets/Tets.htm" rel="stylesheet">
 </head>
 
 <!-- NAVBAR -->
@@ -63,27 +59,27 @@
               <li class="active"><a href="#">Inicio</a></li>
               <li><a href="#objetivos">Objetivos</a></li>
               <li class="Desplegable">
-                   <a class="btnDesplegable" href="#lecturas">Lecturas</a> 
-                    <div class="ContenidoDesplegable">
-                      <a href="#lecturas">Lectura 1</a>
-                      <a href="#lecturas">Lectura 2</a>
-                      <a href="#lecturas">Lectura 3</a>
-                      <a href="#lecturas">Lectura 4</a>
-                      <a href="#lecturas">Lectura 5</a>
-                    </div>
+                <a class="btnDesplegable" href="#lecturas">Lecturas</a>
+                <div class="ContenidoDesplegable">
+                  <a href="lecturas/lectura1.html">Lectura 1</a>
+                  <a href="#lecturas">Lectura 2</a>
+                  <a href="#lecturas">Lectura 3</a>
+                  <a href="#lecturas">Lectura 4</a>
+                  <a href="#lecturas">Lectura 5</a>
+                </div>
               </li>
-               
+
               <li><a href="#multimedia">Multimedia</a></li>
               <li class="Desplegable">
-                  <a class="btnDesplegable" href="#actividades">Actividades</a>
-                  <div class="ContenidoDesplegable">
-                      <a href="#actividades">Sopa de Letras</a>
-                      <a href="#actividades">Relacion de palabras</a>
-                      <a href="#actividades">Test</a>
-                      
-                      
-                  </div>
-  
+                <a class="btnDesplegable" href="#actividades">Actividades</a>
+                <div class="ContenidoDesplegable">
+                  <a href="#actividades/sopa_de_letras/sopa_de_letras.htm">Sopa de Letras</a>
+                  <a href="#actividades/DSW/DSW.htm">Relacion de palabras</a>
+                  <a href="#actividades/Test/Test.htm">Test</a>
+
+
+                </div>
+
               </li>
               <li><a href="paginas/autores.html">Autores</a></li>
             </ul>
@@ -92,7 +88,7 @@
       </nav>
     </div>
   </div>
- 
+
   <!-- CARRUSEL -->
   <div id="miCarrusel" class="carousel slide" data-ride="carousel">
     <!-- Indicadores -->
@@ -108,7 +104,7 @@
           <div class="carousel-caption">
             <h1>Git Hub</h1>
             <p>Encuentra material relacionado con el sistema de control de versiones distribuidos GitHub, instalación, gestión de recursos y proyectos compartidos.</p>
-            <p><a class="btn btn-lg btn-primary" href="paginas/lecturas.html" role="button">Ver el contenido</a></p>
+            <p><a class="btn btn-lg btn-primary" href="lecturas/lectura1.html" role="button">Ver el contenido</a></p>
           </div>
         </div>
       </div>
@@ -155,7 +151,7 @@
         <img class="img-circle" src="img/github.png" alt="Generic placeholder image" width="140" height="140">
         <h1>Git y GitHub</h1>
         <p>Encontrará contenido sobre todo lo relacionado con el sistema de control de versiones distribuido GitHub. Para que inicies con pie firme en el mundo del Diseño Web.</p>
-        <p><a class="btn btn-default" href="paginas/lecturas.html" role="button">Ver detalles &raquo;</a></p>
+        <p><a class="btn btn-default" href="lecturas/lectura1.html" role="button">Ver detalles &raquo;</a></p>
       </div>
       <div class="col-lg-4">
         <img class="img-circle" src="img/html5_circle.png" alt="Generic placeholder image" width="140" height="140">
@@ -286,7 +282,7 @@
 
 
   <!-- Bootstrap core JavaScript
-  Se ubica al final, las paginas cargaranmas rapido -->
+  Se ubica al final, las paginas cargara mas rapido -->
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
   <script>
     window.jQuery || document.write('<script src="js/jquery.min.js"><\/script>')
