@@ -1,3 +1,5 @@
+/* Este es solo un ejemplo, una guia */
+
 nav, .Contenedor,footer, article, header,.Principal,aside
 {
     max-width: 93%;
@@ -63,3 +65,4 @@ li a, btnDesplagable{
 li a:hover{
     background-color: skyblue;
 }
+/*Menu desplegable
