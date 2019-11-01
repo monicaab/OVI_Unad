@@ -1,6 +1,6 @@
 /* ESTILO CSS */
 
-.autores {
+.authors {
     display: block;
     position: absolute;
     background: #3c3c3c;
@@ -11,24 +11,24 @@
     padding: 0;
 }
 
-.backgroundautor {
-	height: 200%;
+.backgroundauthors {
+	height: 100%;
     width: 100%;
     position: relative;
 }
 
-.imgautor {
+.imgauthors {
     vertical-align: middle;
     height: 300%;
     width: 100%;
 }
 
-.bodyautor{
+.bodyauthors{
 	margin-left: 0;
 	margin-right: 0;
 }
 
-.featurette-dividerautor {
+.featurette-dividerauthor {
   margin: 8px 0;
 }
 
