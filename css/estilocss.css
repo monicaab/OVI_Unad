@@ -12,7 +12,7 @@
 }
 
 .backgroundauthors {
-	height: 100%;
+	height: 200%;
     width: 100%;
     position: relative;
 }
@@ -29,7 +29,7 @@
 }
 
 .featurette-dividerauthor {
-  margin: 8px 0;
+  margin: 6px 0;
 }
 
 .featurette-dividerreading, .featurette-dividermulti, .featurette-divideracti {
