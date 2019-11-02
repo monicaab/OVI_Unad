@@ -6,12 +6,12 @@ if (api == null){}else{api.LMSInitialize(""); apiStatus=api.LMSGetValue("cmi.cor
 api.LMSSetValue("cmi.core.lesson_status", "failed");}else{if ((scoOk==0) && (scoWrong==0)){api.LMSSetValue("cmi.core.lesson_status", "failed");}
 else{if (apiStatus=="passed"){if (scoOk==0){api.LMSSetValue("cmi.core.lesson_status", "failed");}else{
 if (tiButtonTime){
-clearInterval(interval);$("#ardoraActCanvas").unbind("mousedown");var canvas = document.getElementById("ardoraActCanvas");canvas.width = canvas.width;
+$("#ardoraActCanvas").unbind("mousedown");var canvas = document.getElementById("ardoraActCanvas");canvas.width = canvas.width;
 }
 showMessage("Ok");apiInput=1;}}
 if (apiStatus=="failed"){if (scoWrong==0){api.LMSSetValue("cmi.core.lesson_status", "failed");}else{
 if (tiButtonTime){
-clearInterval(interval);$("#ardoraActCanvas").unbind("mousedown");var canvas = document.getElementById("ardoraActCanvas");canvas.width = canvas.width;
+$("#ardoraActCanvas").unbind("mousedown");var canvas = document.getElementById("ardoraActCanvas");canvas.width = canvas.width;
 }
 showMessage("scoMessage");apiInput=1;}}}}
 var aluName = api.LMSGetValue("cmi.core.student_name");document.getElementById("ardoraAlumSCORM").innerHTML="<p>"+aluName+"</p>";

@@ -2,26 +2,11 @@
 //bajo licencia Attribution-NonCommercial-NoDerivatives 4.0 International (CC BY-NC-ND 4.0)
 //para otros usos contacte con el autor
 var timeInterval; $(document).ready(function() {paintOk();randomSort();timeInterval=setInterval("paintTab()",1000);
-var canWidth=$("#ardoraAct").css("width").replace("px","");var canHeight=$("#ardoraAct").css("height").replace("px","");$("#ardoraActCanvas").attr({"width": canWidth,"height": canHeight})
+var canWidth=(parseInt($("#ardoraAct").css("width").replace("px",""))+6).toString();var canHeight=(parseInt($("#ardoraAct").css("height").replace("px",""))+10).toString();$("#ardoraActCanvas").attr({"width": canWidth,"height": canHeight})
 $("#ardoraActCanvasAnim").attr({"width": canWidth,"height": canHeight});
-$("#buttonOk").mouseenter(function(){$(this).css("-webkit-box-shadow"," 0px 0px 0px rgba(50, 50, 50, 0.5)");
-$(this).css("box-shadow" , "0px 0px 0px rgba(50, 50, 50, 0.75)");removeOk();
-}).mouseleave(function() { $(this).css("-webkit-box-shadow"," 4px 4px 4px rgba(50, 50, 50, 0.5)"); $(this).css("-moz-box-shadow", "4px 4px 4px rgba(50, 50, 50, 0.5)");$(this).css("box-shadow" , "4px 4px 4px rgba(50,50,50,0.5)"); paintOk();}).mousedown(function(){if (typeGame!=99){isCorrect();}})
 initAct();})
-function paintOk(){ var canvas = document.getElementById("buttonOkCanvas"); var contexto = canvas.getContext("2d");
-contexto.fillStyle =colorButton;contexto.fillRect(1,1,canvas.width-2,canvas.height-2);
-var x=canvas.width-2; var grd = contexto.createRadialGradient(x/2, x/2,1, x/2, x/2, 30);grd.addColorStop(0,colorBack);
-grd.addColorStop(1,colorSele);contexto.fillStyle = grd; contexto.fillRect(10, 10,canvas.width-20,canvas.height-20);
-contexto.lineWidth = 1; contexto.strokeStyle =colorText;
-contexto.fillStyle =colorText;contexto.beginPath();contexto.strokeRect(10, 10,canvas.width-20,canvas.height-20);
-contexto.font="bold 36px Verdana"; contexto.textAlign = "left"; contexto.fillText("?",25,48); contexto.stroke();}
-function removeOk(){ var canvas = document.getElementById("buttonOkCanvas"); var contexto = canvas.getContext("2d");
-contexto.fillStyle =colorSele;contexto.fillRect(1,1,canvas.width-2,canvas.height-2);
-var x=canvas.width-2; var grd = contexto.createRadialGradient(x/2, x/2,1, x/2, x/2, 30);grd.addColorStop(0,colorBack);
-grd.addColorStop(1,colorButton);contexto.fillStyle = grd; contexto.fillRect(10, 10,canvas.width-20,canvas.height-20);
-contexto.lineWidth = 1; contexto.strokeStyle =colorText;
-contexto.fillStyle =colorText;contexto.beginPath();contexto.strokeRect(10, 10,canvas.width-20,canvas.height-20);
-contexto.font="bold 36px Verdana"; contexto.textAlign = "left"; contexto.fillText("?",25,48); contexto.stroke();}
+function paintOk(){}
+function removeOk(){}
 function paintTab(){if (document.getElementById("ardoraTabCanvas")!=null){var canvas = document.getElementById("ardoraTabCanvas");var contexto = canvas.getContext("2d");contexto.fillStyle =$(canvas).css("background-color");
 contexto.clearRect(0,0,canvas.width,canvas.height); contexto.lineWidth = 1; contexto.strokeStyle = "black";contexto.fillStyle = "black";if (!isShowMessage){timeAct-=1;}contexto.font="8px Verdana";
 var profundidade=1; var x = canvas.width / 2; var y = canvas.width / 2+19;
@@ -77,7 +62,7 @@ if (typeMessage=="Attempts"){ if (tiTime || tiAttempts || tiScore || tiSuccesses
 var canvas = document.getElementById("ardoraActCanvas"); document.getElementById("ardoraActCanvas").style.zIndex=5;
 document.getElementById("ardoraActCanvas").style["visibility"]="visible";canvas.width = canvas.width;
 var contexto = canvas.getContext("2d"); contexto.globalAlpha = 0.50;contexto.fillStyle = colorBack;
-contexto.fillRect(0,0,canvas.width,canvas.height); contexto.font="14px " + fMenssage; var metricsW = contexto.measureText(textMessage).width;var x=(canvas.width / 2)-(metricsW / 2);var y=(canvas.height / 2);
+contexto.fillRect(0,0,canvas.width,canvas.height); contexto.font="10px " + fMenssage; var metricsW = contexto.measureText(textMessage).width;var x=(canvas.width / 2)-(metricsW / 2);var y=(canvas.height / 2);
 if (metricsW<canvas.width-20){ contexto.beginPath(); contexto.globalAlpha = 1; contexto.lineWidth = 2; contexto.fillStyle = "white"; var xAnim=canvas.width/2; var wAnim=0;
 interval = setInterval(function () { contexto.strokeStyle = borderColor; roundedRect(contexto,xAnim,y-20,wAnim,30,5,"white"); xAnim-=1; wAnim+=2; if (wAnim>metricsW+30){ clearInterval(interval); contexto.shadowColor = "black";
 contexto.shadowBlur = 20; contexto.shadowOffsetX = 10; contexto.shadowOffsetY = 10; contexto.stroke(); contexto.beginPath(); contexto.textAlign = "left"; contexto.fillStyle = "black"; contexto.fillText(textMessage,x,y);
@@ -117,7 +102,7 @@ document.getElementById("ardoraTab").style["visibility"]="hidden";
 $("#ardoraActCanvas").css("cursor", "pointer");if (tiTime || tiAttempts || tiScore || tiSuccesses ){clearInterval(timeInterval);}var canvas = document.getElementById("ardoraActCanvas");
 var contexto = canvas.getContext("2d");canvas.width = canvas.width;contexto.globalAlpha = 0.98;contexto.fillStyle = colorButton;contexto.fillRect(0,0,canvas.width,canvas.height);
 contexto.lineWidth = 2;contexto.strokeStyle = colorSele;contexto.rect(5,5,canvas.width-10,canvas.height-10);contexto.stroke();
-contexto.font="14px " + fMenssage ;var metricsW = contexto.measureText(textButtonTime).width;var x=(canvas.width / 2)-(metricsW / 2);var y=(canvas.height / 2);
+contexto.font="10px " + fMenssage ;var metricsW = contexto.measureText(textButtonTime).width;var x=(canvas.width / 2)-(metricsW / 2);var y=(canvas.height / 2);
 contexto.beginPath(); contexto.globalAlpha = 1;contexto.lineWidth = 2;contexto.fillStyle = colorBack;var xAnim=canvas.width/2;var wAnim=0;interval = setInterval(function () {
 contexto.strokeStyle = colorText;roundedRect(contexto,xAnim,y-20,wAnim,30,5,colorBack);xAnim-=1;wAnim+=2;if (wAnim>metricsW+30){
 clearInterval(interval);contexto.shadowColor = "black";contexto.shadowBlur = 20;contexto.shadowOffsetX = 10;contexto.shadowOffsetY = 10;
@@ -128,4 +113,6 @@ function cssColors(){
 $("body").css("background-color",colorBack);$("#ardoraMain").css("color",colorText);$("#ardoraMain").css("font-family",fEnun);$("#ardoraAct").css("font-family",fActi);$("#ardoraTag").css("font-family",fActi);
 document.styleSheets[0].insertRule("label:before { background-color: "+colorButton+"; }", 0);
 document.styleSheets[0].insertRule("input[type=checkbox]:checked + label:before {color: "+colorBack+"; }", 0);
+if ($(".imaCell_img").length !=0) {var color1=colorSele;var color2=colorBack;
+$(".imaCell_img").css("background",color1);}
 }
